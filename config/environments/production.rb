@@ -35,6 +35,10 @@ Rails.application.configure do
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
 
+  # # Compile app/assets/fonts folder to rails pipeline
+  # config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+  # config.assets.precompile += %w( .svg .eot .woff .ttf)
+
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Specifies the header that your server uses for sending files.

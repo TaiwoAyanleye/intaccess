@@ -4,11 +4,20 @@
   <title>Intaccess</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div id= "nav">
+		<div class="row">
+			<%= render 'layouts/navigation' %>
+		</div>
+	</div>
+	
+	<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
 <%= yield %>
-
+	  <%= render 'layouts/footer' %>
 </body>
 </html>

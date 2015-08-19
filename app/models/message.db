@@ -1,0 +1,6 @@
+class Message
+	include ActiveModel::Model
+	attr_accessor  :email, :product_no, :content
+
+	validates :email, :content, :product_no, presence: true
+end
