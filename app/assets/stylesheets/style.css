@@ -60,7 +60,7 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	font-size: 13px;
-	color: #626262;
+	color: #6F6F6F;
 	line-height: 23px;
 	letter-spacing: 0.02em
 }
@@ -208,10 +208,10 @@ i { color: #9a9a9a; margin: 0 3px}
 .bg-highlight{ background: #345b8f !important; text-align:center}
 .bg-green{ background: #70bd5b !important; }
 .bg-gray { background-color: #f6f6f6 !important;}
-.bg-yellow-ochre { background-color: #997546 !important;}
-.bg-deep-brown{ background-color: #544441 !important;}
+.bg-yellow-ochre { background-color: #00b0ea !important;}
+.bg-deep-brown{ background-color: #8f4987 !important;}
 .bg-transparent { background:transparent !important}
-.bg-orange { background:#c24742 !important;}
+.bg-orange { background:#555f9b !important;}
 .bg-deep-orange { background:#f15a22 !important;}
 .bg-fast-orange { background:#ff513b !important;}
 .bg-pink { background:#c2345f !important}
@@ -632,7 +632,7 @@ footer ul.list-inline li:first-child {padding-left: 6px}
 .footer-social i {  font-size: 22px;}
 .footer-social a { margin: 0 25px;}
 .footer-social a:last-child {margin-right: 0}
-.footer-social a i {color: #000; }
+.footer-social a i {color: #00B0EA; }
 .footer-social a:hover i { color: #868686}
 .copyright { font-size: 11px; text-transform:uppercase; color: #888888 }
 .footer-logo img { max-width: 100px;}
@@ -659,7 +659,8 @@ footer ul.list-inline li:first-child {padding-left: 6px}
 .owl-page span { background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7); border-radius: 4px; box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1); display: block; height: 7px; transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s; width: 7px; }
 .owl-page:hover span { background: none repeat scroll 0 0 rgba(255, 255, 255, 1); }
 .owl-page.active span { background: none repeat scroll 0 0 transparent; border: 1px solid rgba(255, 255, 255, 0.8); transform: scale(1.33333); }
-.owl-bg-img { background-position: center center; background-repeat: no-repeat; background-size: cover; display: block; overflow: hidden; position: relative; width: 100%; }
+.owl-bg-img { background-position: center center; background-repeat: no-repeat; background-size: cover; display: block; overflow: hidden; position: relative; width: 100%; background-image:url(background_09.jpg);}
+
 .owl-subtitle { font-size: 14px; letter-spacing: 10px; text-transform: uppercase; font-weight: 400; line-height: 80px; display:block}
 .owl-title { font-size: 35px; font-weight: 600; text-transform: uppercase; display: block; letter-spacing: 7px;}
 .owl-title-big { background: rgba(0, 0, 0, 0.5); display: inline-block; font-size: 25px; font-weight: 600; letter-spacing: 7px; line-height: 40px; padding: 35px 50px; text-transform: uppercase; width: 60% }
@@ -1001,7 +1002,9 @@ footer ul.list-inline li:first-child {padding-left: 6px}
 .category-list li { padding: 5px 0}
 .category-list li:first-child { padding: 0 0 5px 0}
 .category-list li a { color: #626262; }
-.category-list li a:hover { color:#000}
+.category-list li a:hover {
+	color: #606
+}
 .category-list li a span { color:#a8a8a8}
 .category-list li a span:before { content: "/"; margin-right: 4px; padding-left: 10px;}
 .widget-posts li { padding:10px 0;}
@@ -1267,7 +1270,14 @@ figure:hover img { -ms-transform: scale(1.1,1.1); -webkit-transform: scale(1.1,1
 .highlight-button i { color: #000}
 .highlight-button:hover i {color:#fff}
 
-.highlight-button-dark { border:0px solid #000; display: inline-block; padding: 8px 20px 9px; font-size: 12px; color:#fff; background-color: #A851D3;  }
+.highlight-button-dark {
+	border: 0px solid #000;
+	display: inline-block;
+	padding: 8px 20px 9px;
+	font-size: 12px;
+	color: #fff;
+	background-color: #8F4987;
+}
 .highlight-button-dark:hover { background-color: transparent; border: 2px solid #000; color:#000}
 .highlight-button-dark i { color: #fff}
 .highlight-button-dark:hover i {color:#000}

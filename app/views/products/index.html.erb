@@ -1,123 +1,123 @@
-        <!-- head section -->
-        <section class="page-title parallax3 parallax-fix page-title-large page-title-shop">
-            <div class="opacity-light bg-dark-gray"></div>
-            <img class="parallax-background-img" src="http://placehold.it/1920x1000" alt="" />
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 wow fadeIn">
-                        <!-- page title tagline -->
-                        <span class="text-uppercase white-text">Since 1982 brand</span>
-                        <!-- end title tagline -->
-                        <!-- page title -->
-                        <h1 class="white-text">Collection</h1>
-                        <!-- end page title -->
-                    </div>
-                    <div class="col-md-12 col-sm-12 breadcrumb text-uppercase margin-three no-margin-bottom wow fadeIn">
-                        <!-- breadcrumb -->
-                        <ul>
-                            <li><a class="white-text" href="#">Home</a></li>
-                            <li class="white-text"><a class="white-text" href="#">Shop</a></li>
-                            <li class="white-text">Collection</li>
-                        </ul>
-                        <!-- end breadcrumb -->
-                    </div>
-                </div>
+<!-- head section -->
+<section class="content-top-margin page-title parallax3 parallax-fix">
+    <div class="opacity-medium bg-black"></div>
+    <img class="parallax-background-img" src="images/background_store.jpg"  alt=""/>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-7 col-sm-12 wow fadeInUp" data-wow-duration="300ms">
+                <!-- page title -->
+                <h1 class="white-text">ONLINE STORE</h1>
+                <!-- end page title -->
+              <!-- page title tagline -->
+                <span class="text-uppercase white-text xs-display-none">VIEW OUR INVENTORY.</span>
+                <!-- end title tagline -->
             </div>
-        </section>
-        <!-- end head section -->
+            <div class="col-lg-4 col-md-5 col-sm-12 breadcrumb text-uppercase wow fadeInUp xs-display-none" data-wow-duration="600ms">
+                <div class="separator-line bg-white no-margin-lr sm-margin-top-two sm-margin-bottom-three no-margin-top xs-display-none"></div>
+              <!-- breadcrumb -->
+                <ul>
+                    <li><a class="white-text" href="#">Home</a></li>
+                    <li class="white-text">STORE</li>
+                </ul>
+                <!-- end breadcrumb -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end head section -->
 
-        <!-- content section -->
-        <section>
-            <div class="container">
-                <div class="row">
-                    <!-- sidebar  -->
-                    <div class="col-md-2 col-sm-4 sidebar">
-                        <!-- widget  -->
-                        <div class="widget">
-                            <h5 class="widget-title font-alt">Categories</h5>
-                            <div class="thin-separator-line bg-dark-gray no-margin-lr margin-ten"></div>
-                            <div class="widget-body">
-                                <ul class="category-list">
-                                    <% @categories.each do |category| %>
-                                        <li><%= category.name %><span>&nbsp;/&nbsp;<%= category.products.count %></span></a></li>
-                                    <% end %>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- end widget  -->
-                        
-                         <!-- widget  -->
-                        <div class="widget no-margin-bottom">
-                            <h5 class="widget-title font-alt">Shop By Brand</h5>
-                            <div class="thin-separator-line bg-dark-gray no-margin-lr margin-ten"></div>
-                            <div class="widget-body">
-                                <ul class="category-list">
-                                    <% @brands.each do |brand| %>
-                                        <li><%= brand.name %><span>&nbsp;/&nbsp;<%= brand.products.count %></span></a></li>
-                                    <% end %>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- end widget  -->
-                    </div>
-                    <!-- end sidebar  -->
-                    <div class="col-md-9 col-sm-8 col-md-offset-1">
-                        <div class="shorting clearfix xs-margin-top-three">
-                            <div class="col-md-8 col-sm-7 grid-nav">
-                                <p class="text-uppercase letter-spacing-1 sm-display-none"><%= "Showing #{@products.total_pages} - #{@products} of #{@products.total_count} results" %></p>
-                            </div>
-                            <div class="col-md-3 col-sm-5 pull-right">
-                                <div class="select-style input-round med-input shop-shorting no-border">
-                                    <select>
-                                        <option value="">Select sort by</option>
-                                        <option value="">By popularity</option>
-                                        <option value="">By rating</option>
-                                        <option value="">Price: low to high</option>
-                                        <option value="">Price: high to low</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <!--  -->
-                        <div class="product-listing margin-three">
-                            <!-- shop item -->
-                            <% @products.each do |product| %>
-                                <div class="col-md-12 col-sm-12 product-list margin-five">
-                                    <!-- product image -->
-                                    <div class="col-md-5 col-sm-12">
-                                        <a><%= link_to image_tag(product.image_url), product %></a>
-                                    </div>
-                                    <!-- end product image -->
-                                    <!-- product details -->
-                                    <div class="col-md-5 col-sm-12 margin-one sm-text-center">
-                                        <!-- product name -->
-                                        <span class="text-large text-uppercase font-weight-600 letter-spacing-2 black-text"><a href="shop-single-product.html"><%= link_to (product.name), product %></a></span>
-                                        <!-- end product name -->
-                                        <!-- product stock -->
-                                        <p class="text-small text-uppercase letter-spacing-2 margin-two"><%= product.brand.name.capitalize %></p>
-                                        <!-- end product stock -->
-                                        <div class="separator-line bg-black no-margin-lr margin-five sm-display-none"></div>
-                                        <!-- product short description -->
-                                        <p><%= product.description %>
-                                        <p class="highlight-button-dark btn btn-small no-margin-bottom"><i class="icon-envelope"></i><%= link_to "ENQUIRE ABOUT THIS PRODUCT", new_message_path %></p>
-                                        </p>
-                                        <!-- end product short description -->
-                                        <% if admin_signed_in? %>
-                                            <td><%= link_to 'Edit', edit_product_path(product) %></td>
-                                            <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                                        <% end %>
-                                    </div>
-                                    <!-- end product details -->
-                                </div>
+<!-- content section -->
+<section>
+    <div class="container">
+        <div class="row">
+            <!-- sidebar  -->
+            <div class="col-md-2 col-sm-4 sidebar">
+                <!-- widget  -->
+                <div class="widget">
+                    <h5 class="widget-title font-alt">Categories</h5>
+                    <div class="thin-separator-line bg-dark-gray no-margin-lr margin-ten"></div>
+                    <div class="widget-body">
+                        <ul class="category-list">
+                            <% @categories.each do |category| %>
+                                <li><%= category.name %><span>&nbsp;/&nbsp;<%= category.products.count %></span></a></li>
                             <% end %>
-                            <!-- end shop item -->
-                        </div>
-                        <!--  -->
-                        <!-- pagination -->
-                        <%= paginate @products, :window => 4 %>
-                        <!-- end pagination -->
+                        </ul>
                     </div>
                 </div>
+                <!-- end widget  -->
+                
+                 <!-- widget  -->
+                <div class="widget no-margin-bottom">
+                    <h5 class="widget-title font-alt">Shop By Brand</h5>
+                    <div class="thin-separator-line bg-dark-gray no-margin-lr margin-ten"></div>
+                    <div class="widget-body">
+                        <ul class="category-list">
+                            <% @brands.each do |brand| %>
+                                <li><%= brand.name %><span>&nbsp;/&nbsp;<%= brand.products.count %></span></a></li>
+                            <% end %>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end widget  -->
             </div>
-        </section>
-        <!-- end content section -->
+            <!-- end sidebar  -->
+            <div class="col-md-9 col-sm-8 col-md-offset-1">
+                <div class="shorting clearfix xs-margin-top-three">
+                    <div class="col-md-8 col-sm-7 grid-nav">
+                        <p class="text-uppercase letter-spacing-1 sm-display-none"><%= "Showing #{@products.total_pages} - #{@products} of #{@products.total_count} results" %></p>
+                    </div>
+                    <div class="col-md-3 col-sm-5 pull-right">
+                        <div class="select-style input-round med-input shop-shorting no-border">
+                            <select>
+                                <option value="">Select sort by</option>
+                                <option value="">By popularity</option>
+                                <option value="">By rating</option>
+                                <option value="">Price: low to high</option>
+                                <option value="">Price: high to low</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="product-listing margin-three">
+                    <!-- shop item -->
+                    <% @products.each do |product| %>
+                        <div class="col-md-12 col-sm-12 product-list margin-five">
+                            <!-- product image -->
+                            <div class="col-md-5 col-sm-12">
+                                <a><%= link_to image_tag(product.image_url), product %></a>
+                            </div>
+                            <!-- end product image -->
+                            <!-- product details -->
+                            <div class="col-md-5 col-sm-12 margin-one sm-text-center">
+                                <!-- product name -->
+                                <span class="text-large text-uppercase font-weight-600 letter-spacing-2 black-text"><a href="shop-single-product.html"><%= link_to (product.name), product %></a></span>
+                                <!-- end product name -->
+                                <!-- product stock -->
+                                <p class="text-small text-uppercase letter-spacing-2 margin-two"><%= product.brand.name.capitalize %></p>
+                                <!-- end product stock -->
+                                <div class="separator-line bg-black no-margin-lr margin-five sm-display-none"></div>
+                                <!-- product short description -->
+                                <p><%= product.description %>
+                                <p class="highlight-button-dark btn btn-small no-margin-bottom"><i class="icon-envelope"></i><%= link_to "ENQUIRE ABOUT THIS PRODUCT", new_message_path %></p>
+                                </p>
+                                <!-- end product short description -->
+                                <% if admin_signed_in? %>
+                                    <td><%= link_to 'Edit', edit_product_path(product) %></td>
+                                    <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                                <% end %>
+                            </div>
+                            <!-- end product details -->
+                        </div>
+                    <% end %>
+                    <!-- end shop item -->
+                </div>
+                <!--  -->
+                <!-- pagination -->
+                <%= paginate @products, :window => 4 %>
+                <!-- end pagination -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end content section -->
