@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby "2.2.2"
 gem 'rails', '4.2.1'
 gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
@@ -21,6 +21,10 @@ group :development do
 	gem 'better_errors'
 	gem 'faker'
 	gem 'populator'
+end
+
+group :production do
+	gem 'pg'
 end
 
 gem 'carrierwave'
