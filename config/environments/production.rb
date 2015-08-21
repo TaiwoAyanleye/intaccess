@@ -80,4 +80,19 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+    # Required for Devise. Remember to change localhost:3000 to actual application host
+  config.mandrill_mailer.default_url_options = { :host => 'intaccess.herokuapp.com' }
+  # ActionMailer Config
+  # Setup for production - deliveries, no errors raised
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default :charset => "utf-8"
+  
+  config.action_mailer.smtp_settings = {
+    :port                 => 587,
+    :address              => "smtp.mandrillapp.com",
+    :domain               => 'mandrillapp.com',
+    :user_name            => ENV["MANDRILL_USERNAME"],
+    :password             => ENV["MANDRILL_APIKEY"],
+    :authentication       => 'plain'
 end

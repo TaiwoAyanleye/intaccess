@@ -64,10 +64,10 @@
             <div class="col-md-9 col-sm-8 col-md-offset-1">
                 <div class="shorting clearfix xs-margin-top-three">
                     <div class="col-md-8 col-sm-7 grid-nav">
-                        <p class="text-uppercase letter-spacing-1 sm-display-none"><%= "Showing #{@products.total_pages} - #{@products} of #{@products.total_count} results" %></p>
+                        <p class="text-uppercase letter-spacing-1 sm-display-none"><%= "Showing #{@products.first.id} - #{@products.last.id} of #{@products.total_count} results" %></p>
                     </div>
                     <div class="col-md-3 col-sm-5 pull-right">
-                        <div class="select-style input-round med-input shop-shorting no-border">
+<!--                         <div class="select-style input-round med-input shop-shorting no-border">
                             <select>
                                 <option value="">Select sort by</option>
                                 <option value="">By popularity</option>
@@ -75,7 +75,7 @@
                                 <option value="">Price: low to high</option>
                                 <option value="">Price: high to low</option>
                             </select>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!--  -->
@@ -102,10 +102,6 @@
                                 <p class="highlight-button-dark btn btn-small no-margin-bottom"><i class="icon-envelope"></i><%= link_to "ENQUIRE ABOUT THIS PRODUCT", new_message_path %></p>
                                 </p>
                                 <!-- end product short description -->
-                                <% if admin_signed_in? %>
-                                    <td><%= link_to 'Edit', edit_product_path(product) %></td>
-                                    <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                                <% end %>
                             </div>
                             <!-- end product details -->
                         </div>
@@ -120,4 +116,4 @@
         </div>
     </div>
 </section>
-<!-- end content section -->
+<!-- end content section

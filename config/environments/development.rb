@@ -52,12 +52,13 @@ Rails.application.configure do
   config.action_mailer.default :charset => "utf-8"
 
   # Gmail  
-  config.action_mailer.smtp_settings = {
-    :address              => "smtp.gmail.com",
+    config.action_mailer.smtp_settings = {
     :port                 => 587,
-    :domain               => 'gmail.com',
+    :address              => "smtp.gmail.com",
+    # :domain               => 'gmail.com',
     :user_name            => 'onlyyouandty@gmail.com',
-    :password             => 'theHead153',
-    :authentication       => 'plain',
-    :enable_starttls_auto => true  }
+    :password             => 'theHeadright153',
+    :enable_starttls_auto => true,
+    :authentication       => 'plain'
+  }
 end

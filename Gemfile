@@ -33,5 +33,5 @@ gem 'rmagick', :require => 'rmagick'
 gem 'high_voltage', '~> 2.4.0'
 gem 'simple_form'
 gem 'rails_admin'
-gem 'devise'
 gem 'kaminari'
+gem "figaro"

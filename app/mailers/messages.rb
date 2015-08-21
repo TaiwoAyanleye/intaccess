@@ -1,5 +1,5 @@
 class Messages < ApplicationMailer
-	default to: "onlyyouandty@gmail.com"
+	default to: 'onlyyouandty@gmail.com'
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
