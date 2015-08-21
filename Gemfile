@@ -19,8 +19,6 @@ end
 group :development do
 	gem 'sqlite3'
 	gem 'better_errors'
-	gem 'faker'
-	gem 'populator'
 end
 
 group :production do
@@ -28,6 +26,8 @@ group :production do
 	gem 'rails_12factor'
 end
 
+gem 'faker'
+gem 'populator'
 gem 'carrierwave'
 gem 'rmagick', :require => 'rmagick'
 gem 'high_voltage', '~> 2.4.0'
