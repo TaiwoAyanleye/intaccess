@@ -1,12 +1,10 @@
 <%= simple_form_for([@product, @message], :html => {:multipart => true}) do |f| %>
 	<div>
-		<p>PLACE YOUR ENQUIRY HERE</p>
+		<p>PRODUCT ENQUIRY</p>
 		<hr>
 		<%= f.input :product_name, required: true, placeholder: "Product name", label: false %>
-		<%= f.input :product_number, required: true, placeholder: "Product number", label: false %>
 		<%= f.input :email, placeholder: "Email", label: false %>
-		<%= f.input :phone, placeholder: "Phone (optional)", label: false %>
-		<%= f.input :content, as: :text, placeholder: "Message here (optional)", label: false  %>
+		<%= f.input :content, as: :text, placeholder: "Enquiry (optional)", label: false  %>
 		<%= f.button :submit,  "Enquire price" %>
 	</div>
 <% end %>

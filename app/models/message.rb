@@ -1,6 +1,7 @@
 class Message
 	include ActiveModel::Model
-	attr_accessor :product_name, :product_number, :email, :content, :phone
+	attr_accessor :product_name, :email, :content
+	# belongs_to :product
 
-	validates :product_name, :product_number, :email, presence: true
+	validates :product_name, :email, presence: true
 end
