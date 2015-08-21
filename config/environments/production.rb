@@ -95,4 +95,5 @@ Rails.application.configure do
     :user_name            => ENV["MANDRILL_USERNAME"],
     :password             => ENV["MANDRILL_APIKEY"],
     :authentication       => 'plain'
+  }
 end
