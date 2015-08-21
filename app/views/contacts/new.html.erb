@@ -1,0 +1,14 @@
+<%= simple_form_for @contact  do |f| %>
+	<div class = "messages-feedback">
+		<div class="row">
+		  <div class="small-12 large-12 medium-12 columns">
+			<p>PLACE ENQUIRY</p>
+			<hr>
+			<%= f.input :email, placeholder: "Email", label: false %>
+		    <%= f.input :name, required: true, placeholder: "Name", label: false %>
+		    <%= f.input :content, placeholder: "Content", label: false %>
+		    <%= f.button :submit,  "contact" %>
+			</div>
+		</div>
+	</div>
+<% end %>

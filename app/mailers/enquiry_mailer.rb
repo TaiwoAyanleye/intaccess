@@ -1,4 +1,4 @@
-class EnquiryMailer < ApplicationMailer
+class EnquiryMailer < ActionMailer::Base
 	default to: "team@stutern.com"
   
   def enquire_now(enquire)

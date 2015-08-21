@@ -1,0 +1,14 @@
+<%= simple_form_for @enquiry  do |f| %>
+	<div class = "messages-feedback">
+		<div class="row">
+		  <div class="small-12 large-12 medium-12 columns">
+			<p>PLACE ENQUIRY</p>
+			<hr>
+			<%= f.input :email, placeholder: "Email", label: false %>
+		    <%= f.input :product_name, required: true, placeholder: "Product name", label: false %>
+		    <%= f.input :enquiry, placeholder: "enquiry", label: false %>
+		    <%= f.button :submit,  "Place enquiry" %>
+			</div>
+		</div>
+	</div>
+<% end %>

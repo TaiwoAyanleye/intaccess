@@ -1,4 +1,4 @@
-class ContactMailer < ApplicationMailer
+class ContactMailer < ActionMailer::Base
 	default to: "team@stutern.com"
   
   def contact_us(message)
